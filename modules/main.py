@@ -76,7 +76,7 @@ async def account_login(bot: Client, m: Message):
     await input1.delete(True)
     
 
-    await editable.edit("**𝙀𝙉𝙏𝙀𝙍 𝙍𝙀𝙎𝙊𝙇𝙐𝙏𝙄𝙊𝙉📸**\n144,240,360,480,720,1080 please choose quality")
+    await editable.edit("**𝙀𝙉𝙏𝙀𝙍 𝙍𝙀𝙎𝙊𝙇𝙐𝙏𝙄𝙊𝙉📸**\n`144`,`240`,`360`,`480`,`720`,`1080` please choose quality")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -100,7 +100,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("Now Enter A Caption to add caption on your uploaded file\n ex: `@official_virendraverma`")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -110,7 +110,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = no")
+    await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -162,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] 𝙑𝙞𝙙_𝙄𝘿:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 {𝗻𝗮𝗺𝗲𝟭} {MR}.mkv\n**𝘽𝘼𝙏𝘾𝙃** » **{raw_text0}**'
-                cc1 = f'**[📁] 𝙋𝙙𝙛_𝙄𝘿:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 {𝗻𝗮𝗺𝗲𝟭} {MR}.pdf \n**𝘽𝘼𝙏𝘾𝙃** » **{raw_text0}**'
+                cc = f'**[📽️] 𝙑𝙞𝙙_𝙄𝘿:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀** »{𝗻𝗮𝗺𝗲𝟭} 𝙑𝙄𝙍𝙀𝙉𝘿𝙍𝘼 𝙑𝙀𝙍𝙈𝘼™.mkv\n**𝘽𝘼𝙏𝘾𝙃** » **{raw_text0}**\n𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝘿 𝘽𝙔 » {MR}'
+                cc1 = f'**[📁] 𝙋𝙙𝙛_𝙄𝘿:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀** »{𝗻𝗮𝗺𝗲𝟭} 𝙑𝙄𝙍𝙀𝙉𝘿𝙍𝘼 𝙑𝙀𝙍𝙈𝘼™.pdf \n**𝘽𝘼𝙏𝘾𝙃** » **{raw_text0}**𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝘿 𝘽𝙔 » {MR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
